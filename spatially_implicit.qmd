@@ -1,0 +1,94 @@
+---
+title: "Spatially implicit tools for management"
+format: html
+editor: visual
+---
+
+# Spatially implicit fisheries management tools prevent local depletion with lower costs
+
+## Background
+
+Fish species have been successfully managed at the stock level for decades, if not centuries. However, growing recognition of the importance of stock structure has increased due to advancement of genetic methods for stock identification, and recognition of the the potential consequences for ignoring stock structure in fisheries management.
+
+Within stock structure poses challenges for fisheries management because splitting stocks can result in the need for spatially explicit data collection, stock assessment, and management measures. A particular challenge for stock assessments is that while pooled data sources may be split on request for the current period, and separated moving forward, historical time series of biomass and catch may not be able to be reliably split spatially. Moreover, conducting stock assessments for many sub-areas can be costly in terms of staff resources and computing time.
+
+A growing literature on spatially explicit stock assessments recognizes the tradeoffs with conducting assessments at the sub-population level (cite Bosely, Goethel, Berger etc). Failing to account for stock structure can result in unintentional local depletion. However, costs of implementing spatial structure can be high. Governance/allocation process.
+
+Beyond conducting assessments at increasingly finer scales, what other options exist for managing spatially? Conducting assessments at the stock level and then splitting them via an allocation process is one option. For example, for the coastal stock of Pacific Hake, an annual total allowable catch is set coastwide, and the allocation of that quota among the U.S. and Canada is dictated by an international treaty that specifies fixed proportions of the quota to each country. For other groundfish stocks on the U.S. west coast where structure in the stocks, catch histories, or management measures are present, assessments are conducted at the sub-area level, but may be pooled across areas for the determination of stock status (depletion) required by U.S. fisheries management legislation.
+
+The goal of fisheries management is often to allow for harvesting of a population without causing irreversible harm to the stock by overfishing. Here we explore alternative ways of accounting for spatial structure in fish stocks and preventing local depletion that may be cheaper than conducting spatial stock assessments or negotiating allocations among areas down to the 4th decimal point. We use a generic management strategy evaluation framework to explore the tradeoffs among biomass, catch, and catch stability when stocks are harvested using spatially implicit or explicit methods.
+
+### Potential case studies
+
+Cryptic species - how to set a quota for a species you can't tell apart from another. Considerations are that you can tell species apart with lab analysis, but not in real time. Can you use spatial management to reduce catch of species A (smaller, less productive population) in the species B fishery?
+
+Genetic structure - reveals a break in what was previously thought of as a stock. Is splitting the only option? Coastal cod north and south
+
+Multiple species in a guild - how to set quotas for each of them, acknowledging a cap on the total
+
+## Methods
+
+We used a simplified management strategy evaluation simulation framework to explore the questions of interest.
+
+Population dynamics in the operating model were defined with a Schaefer model.
+
+The population is assessed by fitting the operating model to an estimation model (also a schaefer model) and estimating the values of the parameters.
+
+In the projections, the biomass dynamics are projected X years into the future. In each time step, the harvest is determined by the management sub-model that applies a harvest control rule, and allocates harvest across the two areas, as needed.
+
+### Case study 1 cryptic species
+
+In the first example, we assume two independent populations. One is smaller and less productive than the other.
+
+We assess each stock independently based on survey, genetic typing, or otolith typing and assume we can accurately measure in the survey the proportion (biomass?) of fish from each species.
+
+Questions -
+
+## Case study 2 break in stock structure
+
+Case study similar to coastal cod north and coastal cod south
+
+Assume:
+
+-   two substocks that don't mix.
+
+-   SS1 is larger and more productive than SS2?
+
+Options:
+
+-   Assessment
+
+    -   assess together
+
+    -   assess each substock
+
+    -   no assessment (use empirical rule)
+
+-   HCR
+
+    -   population-wide
+
+        -   allocate based on survey proportions
+
+        -   'fuzzy' allocation to allow for flexibility
+
+    -   substock based on spatial assessment
+
+    -   substock based on spatial survey indices
+
+    -   
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

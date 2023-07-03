@@ -7,13 +7,13 @@
 schaefer(B, C, K, r)
 }
 \arguments{
-\item{B}{define}
+\item{B}{current year biomass}
 
-\item{C}{define}
+\item{C}{current year catch}
 
-\item{K}{define}
+\item{K}{carrying capacity}
 
-\item{r}{define}
+\item{r}{population growth rate}
 }
 \description{
 schaefer takes the current biomass, a catch, and the model parameters to compute next year's biomass
